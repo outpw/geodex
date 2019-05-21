@@ -1,0 +1,297 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.28516352176666,
+              40.01681438616051
+            ],
+            [
+              -105.28130918741226,
+              40.01762373035351
+            ],
+            [
+              -105.28233647346497,
+              40.02055290092305
+            ],
+            [
+              -105.28615593910217,
+              40.01983397168348
+            ],
+            [
+              -105.28516352176666,
+              40.01681438616051
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 7"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.28516620397568,
+              40.01681644034574
+            ],
+            [
+              -105.28410673141478,
+              40.01364675897652
+            ],
+            [
+              -105.28024166822433,
+              40.014460249248856
+            ],
+            [
+              -105.28130918741226,
+              40.01762783867515
+            ],
+            [
+              -105.28516620397568,
+              40.01681644034574
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.28024166822433,
+              40.014460249248856
+            ],
+            [
+              -105.27629345655441,
+              40.015277838287865
+            ],
+            [
+              -105.27735292911528,
+              40.01843511908401
+            ],
+            [
+              -105.28130650520323,
+              40.01762783867515
+            ],
+            [
+              -105.28024166822433,
+              40.014460249248856
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.28130918741226,
+              40.01762989283591
+            ],
+            [
+              -105.27735829353331,
+              40.01843511908401
+            ],
+            [
+              -105.27837753295898,
+              40.021317011696496
+            ],
+            [
+              -105.28233647346497,
+              40.02055290092305
+            ],
+            [
+              -105.28130918741226,
+              40.01762989283591
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.27735829353331,
+              40.01843101081097
+            ],
+            [
+              -105.27268588542937,
+              40.0193923399663
+            ],
+            [
+              -105.27367830276489,
+              40.02224543585212
+            ],
+            [
+              -105.27837753295898,
+              40.021317011696496
+            ],
+            [
+              -105.27735829353331,
+              40.01843101081097
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.27736097574234,
+              40.018431010810914
+            ],
+            [
+              -105.27629613876343,
+              40.015277838287865
+            ],
+            [
+              -105.2716612815857,
+              40.01618580257601
+            ],
+            [
+              -105.2726912498474,
+              40.01938617764306
+            ],
+            [
+              -105.27736097574234,
+              40.018431010810914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.28228282928467,
+              40.012064944578455
+            ],
+            [
+              -105.27959793806076,
+              40.01260728507343
+            ],
+            [
+              -105.27982592582703,
+              40.013258498837345
+            ],
+            [
+              -105.28250277042389,
+              40.01269767473698
+            ],
+            [
+              -105.28228282928467,
+              40.012064944578455
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Boulder, Colorado",
+        "Sheet Number": "sh. 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.2768486738205,
+              40.01050980040051
+            ],
+            [
+              -105.27475923299788,
+              40.00738296999588
+            ],
+            [
+              -105.27384996414185,
+              40.00680977070136
+            ],
+            [
+              -105.2721118927002,
+              40.00682620659046
+            ],
+            [
+              -105.27219772338867,
+              40.01052212664957
+            ],
+            [
+              -105.2768486738205,
+              40.01050980040051
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
