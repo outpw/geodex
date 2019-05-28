@@ -1,0 +1,649 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82316642999648,
+              38.82414986373542
+            ],
+            [
+              -104.8230269551277,
+              38.82685380490763
+            ],
+            [
+              -104.82754111289978,
+              38.82700425302337
+            ],
+            [
+              -104.82770204544067,
+              38.824271062678676
+            ],
+            [
+              -104.82316642999648,
+              38.82414986373542
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 11"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82753843069075,
+              38.8270063425783
+            ],
+            [
+              -104.8230269551277,
+              38.82685171534821
+            ],
+            [
+              -104.82291162014008,
+              38.829641222538484
+            ],
+            [
+              -104.82739359140396,
+              38.829791664763576
+            ],
+            [
+              -104.82753843069075,
+              38.8270063425783
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 8"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82196748256683,
+              38.82914392514305
+            ],
+            [
+              -104.82013016939163,
+              38.829074971868586
+            ],
+            [
+              -104.81995850801468,
+              38.832370027922636
+            ],
+            [
+              -104.82364654541016,
+              38.832474497718835
+            ],
+            [
+              -104.82371360063553,
+              38.83100563830675
+            ],
+            [
+              -104.82186287641525,
+              38.83095967066675
+            ],
+            [
+              -104.82196748256683,
+              38.82914392514305
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 7"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82010602951048,
+              38.829551374946845
+            ],
+            [
+              -104.81626510620117,
+              38.82944481137723
+            ],
+            [
+              -104.81618463993073,
+              38.83224257456363
+            ],
+            [
+              -104.81995850801468,
+              38.832370027922636
+            ],
+            [
+              -104.82010602951048,
+              38.829551374946845
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.81995582580566,
+              38.832370027922636
+            ],
+            [
+              -104.81617927551268,
+              38.8322404851624
+            ],
+            [
+              -104.81606662273407,
+              38.83510708596519
+            ],
+            [
+              -104.81980830430984,
+              38.835215730372056
+            ],
+            [
+              -104.81995582580566,
+              38.832370027922636
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.81995314359666,
+              38.83237211732007
+            ],
+            [
+              -104.81980830430984,
+              38.835215730372056
+            ],
+            [
+              -104.82345610857013,
+              38.835330642545
+            ],
+            [
+              -104.82364386320114,
+              38.832474497718835
+            ],
+            [
+              -104.81995314359666,
+              38.83237211732007
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 9"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82377797365189,
+              38.82966838574153
+            ],
+            [
+              -104.82364386320114,
+              38.832474497718835
+            ],
+            [
+              -104.82724338769913,
+              38.83259359309948
+            ],
+            [
+              -104.82739627361296,
+              38.82978957529042
+            ],
+            [
+              -104.82377797365189,
+              38.82966838574153
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82724338769913,
+              38.83259568249033
+            ],
+            [
+              -104.832264482975,
+              38.832729403378075
+            ],
+            [
+              -104.83235299587248,
+              38.82986479628593
+            ],
+            [
+              -104.82739627361296,
+              38.82978957529042
+            ],
+            [
+              -104.82724338769913,
+              38.83259568249033
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82766449451447,
+              38.83260821883423
+            ],
+            [
+              -104.82364118099213,
+              38.832474497718835
+            ],
+            [
+              -104.8234561085701,
+              38.83532855323443
+            ],
+            [
+              -104.82526659965515,
+              38.83539541114253
+            ],
+            [
+              -104.82674181461334,
+              38.83588639698105
+            ],
+            [
+              -104.82685983181,
+              38.83305952574402
+            ],
+            [
+              -104.8276349902153,
+              38.83308041951312
+            ],
+            [
+              -104.82766449451447,
+              38.83260821883423
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.8234561085701,
+              38.835330642545
+            ],
+            [
+              -104.82328712940215,
+              38.83860869530057
+            ],
+            [
+              -104.82739090919495,
+              38.838729869627656
+            ],
+            [
+              -104.82751429080963,
+              38.836145468994495
+            ],
+            [
+              -104.82527196407318,
+              38.83539541114253
+            ],
+            [
+              -104.8234561085701,
+              38.835330642545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82337832450867,
+              38.83669912779739
+            ],
+            [
+              -104.8234561085701,
+              38.835330642545
+            ],
+            [
+              -104.81980830430984,
+              38.835213641058104
+            ],
+            [
+              -104.81956422328949,
+              38.84000427677817
+            ],
+            [
+              -104.8214042186737,
+              38.84007113029374
+            ],
+            [
+              -104.82154905796051,
+              38.83664898529073
+            ],
+            [
+              -104.82337832450867,
+              38.83669912779739
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82886612415314,
+              38.832639559684324
+            ],
+            [
+              -104.8283377289772,
+              38.83452416410405
+            ],
+            [
+              -104.82947230339049,
+              38.83470175729146
+            ],
+            [
+              -104.83015358448029,
+              38.832672989909206
+            ],
+            [
+              -104.82886612415314,
+              38.832639559684324
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 8"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.81006383895874,
+              38.8320691540529
+            ],
+            [
+              -104.80885148048401,
+              38.832035723544415
+            ],
+            [
+              -104.80881124734879,
+              38.833009380673126
+            ],
+            [
+              -104.81001019477844,
+              38.833057436366765
+            ],
+            [
+              -104.81006383895874,
+              38.8320691540529
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 8"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.80821311473846,
+              38.830602375725604
+            ],
+            [
+              -104.80689346790312,
+              38.83057730232907
+            ],
+            [
+              -104.80686128139496,
+              38.83198975656964
+            ],
+            [
+              -104.80819165706635,
+              38.8320190082843
+            ],
+            [
+              -104.80821311473846,
+              38.830602375725604
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.80741918087006,
+              38.83572969974102
+            ],
+            [
+              -104.80751574039458,
+              38.833903629134696
+            ],
+            [
+              -104.80541288852692,
+              38.833874378194515
+            ],
+            [
+              -104.80535924434662,
+              38.835696270951814
+            ],
+            [
+              -104.80741918087006,
+              38.83572969974102
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 13"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82469797134398,
+              38.84660575829824
+            ],
+            [
+              -104.82453703880309,
+              38.84932555763737
+            ],
+            [
+              -104.8264494538307,
+              38.849381957905614
+            ],
+            [
+              -104.8266077041626,
+              38.84667678356635
+            ],
+            [
+              -104.82469797134398,
+              38.84660575829824
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn Fire Insurance maps. Colorado",
+        "Year": 1892,
+        "Location": "Colorado Springs, Colorado",
+        "Sheet Number": "sh. 13"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.82990145683289,
+              38.83342516581795
+            ],
+            [
+              -104.83189165592194,
+              38.8334544169427
+            ],
+            [
+              -104.83191311359406,
+              38.832718956442775
+            ],
+            [
+              -104.83015358448029,
+              38.832672989909206
+            ],
+            [
+              -104.82990145683289,
+              38.83342516581795
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

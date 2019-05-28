@@ -14,12 +14,12 @@
         "coordinates": [
           [
             [
-              -104.99348670244217,
-              39.74013249037989
+              -104.99355912208556,
+              39.7400788656232
             ],
             [
               -104.9952945113182,
-              39.74013867784913
+              39.740080928114615
             ],
             [
               -104.99529987573624,
@@ -38,8 +38,8 @@
               39.742236197905875
             ],
             [
-              -104.99348670244217,
-              39.74013249037989
+              -104.99355912208556,
+              39.7400788656232
             ]
           ]
         ]
@@ -58,8 +58,8 @@
         "coordinates": [
           [
             [
-              -104.99348670244217,
-              39.74013661535945
+              -104.99355643987656,
+              39.7400788656232
             ],
             [
               -104.99078571796417,
@@ -74,12 +74,12 @@
               39.74149784512792
             ],
             [
-              -104.99529719352722,
-              39.740140740338745
+              -104.9952945113182,
+              39.740080928114615
             ],
             [
-              -104.99348670244217,
-              39.74013661535945
+              -104.99355643987656,
+              39.7400788656232
             ]
           ]
         ]
@@ -278,12 +278,12 @@
               39.74442027335661
             ],
             [
-              -105.00338137149811,
-              39.74097810602592
+              -105.00338673591614,
+              39.74096985616732
             ],
             [
-              -105.0000876188278,
-              39.742494000783395
+              -105.00005006790161,
+              39.74244244028506
             ],
             [
               -105.00261425971985,
@@ -407,7 +407,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh.10"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -438,7 +443,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 16"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -456,12 +466,12 @@
               39.74024386474121
             ],
             [
-              -105.00525891780853,
-              39.74018199011827
+              -105.00523746013641,
+              39.74015930274259
             ],
             [
-              -105.00337600708009,
-              39.74097810602592
+              -105.00338405370712,
+              39.74097191863204
             ],
             [
               -105.00596433877945,
@@ -473,7 +483,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 15"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -508,7 +523,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 14"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -559,7 +579,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 41"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -594,7 +619,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 18"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -633,7 +663,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 20"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -672,7 +707,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 21"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -703,7 +743,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 28"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -738,7 +783,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 29"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -769,7 +819,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 37"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -808,7 +863,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 38"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -819,11 +879,11 @@
             ],
             [
               -104.99083399772644,
-              39.718357408736914
+              39.71836978758407
             ],
             [
-              -104.99090909957886,
-              39.71478395530108
+              -104.99087691307068,
+              39.71478189205276
             ],
             [
               -104.98292416334151,
@@ -839,7 +899,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 39"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -870,42 +935,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -104.98748123645782,
-              39.72254133253322
-            ],
-            [
-              -104.98742759227753,
-              39.7268652789394
-            ],
-            [
-              -104.98833954334259,
-              39.72732736404457
-            ],
-            [
-              -104.9921777844429,
-              39.7273232382984
-            ],
-            [
-              -104.99214559793472,
-              39.72252482840155
-            ],
-            [
-              -104.98748123645782,
-              39.72254133253322
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 36"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -924,11 +959,687 @@
             ],
             [
               -104.99216973781584,
-              39.718361535019554
+              39.71837391386598
             ],
             [
               -104.98747587203978,
               39.718357408736914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 30"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99214828014372,
+              39.72252482840155
+            ],
+            [
+              -104.98748123645782,
+              39.72253926951696
+            ],
+            [
+              -104.9874222278595,
+              39.7266218578618
+            ],
+            [
+              -104.98885989189148,
+              39.7273232382984
+            ],
+            [
+              -104.99152064323425,
+              39.72733148979049
+            ],
+            [
+              -104.99152600765227,
+              39.72566054249585
+            ],
+            [
+              -104.99216437339783,
+              39.72566054249585
+            ],
+            [
+              -104.99214828014372,
+              39.72252482840155
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 40"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99216973781584,
+              39.718375977006815
+            ],
+            [
+              -104.99218314886093,
+              39.71478808179751
+            ],
+            [
+              -104.99518722295761,
+              39.71479220829365
+            ],
+            [
+              -104.99511480331421,
+              39.711189683172655
+            ],
+            [
+              -104.99000251293182,
+              39.71116285954232
+            ],
+            [
+              -104.98998641967773,
+              39.714779828804424
+            ],
+            [
+              -104.99087423086166,
+              39.71478189205276
+            ],
+            [
+              -104.99083667993546,
+              39.71836978758407
+            ],
+            [
+              -104.99216973781584,
+              39.718375977006815
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 31"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99152600765227,
+              39.72566054249585
+            ],
+            [
+              -104.99152064323425,
+              39.72733148979049
+            ],
+            [
+              -104.99638348817825,
+              39.72733561553615
+            ],
+            [
+              -104.9963727593422,
+              39.72252070236801
+            ],
+            [
+              -104.99214828014372,
+              39.72252482840155
+            ],
+            [
+              -104.99216437339783,
+              39.725662605418705
+            ],
+            [
+              -104.99152600765227,
+              39.72566054249585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 27"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99638348817825,
+              39.72733561553615
+            ],
+            [
+              -104.99152064323425,
+              39.72733148979049
+            ],
+            [
+              -104.99163866043091,
+              39.7321336906425
+            ],
+            [
+              -104.99644786119461,
+              39.73209862423706
+            ],
+            [
+              -104.99638348817825,
+              39.72733561553615
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 35"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.9963727593422,
+              39.72252070236801
+            ],
+            [
+              -104.99636471271515,
+              39.717525957750134
+            ],
+            [
+              -104.99217510223389,
+              39.71749501024944
+            ],
+            [
+              -104.99214828014372,
+              39.72252482840155
+            ],
+            [
+              -104.9963727593422,
+              39.72252070236801
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 34"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99636739492416,
+              39.719349772599855
+            ],
+            [
+              -105.0011283159256,
+              39.71936421438018
+            ],
+            [
+              -105.00113368034361,
+              39.714103080011164
+            ],
+            [
+              -104.99636203050613,
+              39.714068004435426
+            ],
+            [
+              -104.99636739492416,
+              39.719349772599855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 33",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99636739492416,
+              39.719349772599855
+            ],
+            [
+              -104.99637544155121,
+              39.724129836719804
+            ],
+            [
+              -105.0011283159256,
+              39.72413189968846
+            ],
+            [
+              -105.0011283159256,
+              39.71936421438018
+            ],
+            [
+              -104.99636739492416,
+              39.719349772599855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 32",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99637544155121,
+              39.724129836719804
+            ],
+            [
+              -104.99638617038727,
+              39.72733561553615
+            ],
+            [
+              -105.00285029411316,
+              39.7273232382984
+            ],
+            [
+              -105.00289052724838,
+              39.7237069268419
+            ],
+            [
+              -105.0011283159256,
+              39.7236966119344
+            ],
+            [
+              -105.0011283159256,
+              39.724129836719804
+            ],
+            [
+              -104.99637544155121,
+              39.724129836719804
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 26",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99638348817825,
+              39.72733561553615
+            ],
+            [
+              -104.9964290857315,
+              39.73052474308396
+            ],
+            [
+              -105.00284761190414,
+              39.73051855475162
+            ],
+            [
+              -105.00285029411316,
+              39.7273232382984
+            ],
+            [
+              -104.99638348817825,
+              39.72733561553615
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 25",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99642640352249,
+              39.73052474308396
+            ],
+            [
+              -104.99647200107574,
+              39.733691033602774
+            ],
+            [
+              -105.00283688306808,
+              39.73370134701503
+            ],
+            [
+              -105.00284492969512,
+              39.73051855475162
+            ],
+            [
+              -104.99642640352249,
+              39.73052474308396
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 22",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.99647200107574,
+              39.733691033602774
+            ],
+            [
+              -104.99652832746506,
+              39.73686130386193
+            ],
+            [
+              -105.00283151865005,
+              39.736881929736214
+            ],
+            [
+              -105.00283420085907,
+              39.73370134701503
+            ],
+            [
+              -104.99647200107574,
+              39.733691033602774
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 18",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -104.9953132867813,
+              39.73686542903728
+            ],
+            [
+              -104.9952945113182,
+              39.740080928114615
+            ],
+            [
+              -105.00157624483107,
+              39.74009124057074
+            ],
+            [
+              -105.00158160924911,
+              39.73687986714904
+            ],
+            [
+              -104.9953132867813,
+              39.73686542903728
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado",
+        "Sheet Number": "sh. 17"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.00157356262207,
+              39.74009124057074
+            ],
+            [
+              -105.00282883644104,
+              39.74009949053456
+            ],
+            [
+              -105.00167548656464,
+              39.740483112760636
+            ],
+            [
+              -105.00234067440032,
+              39.74143390917999
+            ],
+            [
+              -105.00523746013641,
+              39.74015930274259
+            ],
+            [
+              -105.00526160001753,
+              39.736886054910315
+            ],
+            [
+              -105.00158429145813,
+              39.73687986714904
+            ],
+            [
+              -105.00157356262207,
+              39.74009124057074
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 23",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.00283151865005,
+              39.736881929736214
+            ],
+            [
+              -105.00778019428252,
+              39.73690461819079
+            ],
+            [
+              -105.00778287649155,
+              39.73598057327132
+            ],
+            [
+              -105.01040071249007,
+              39.73597438542878
+            ],
+            [
+              -105.01040875911713,
+              39.73451816436552
+            ],
+            [
+              -105.00777751207352,
+              39.734522289681095
+            ],
+            [
+              -105.00778019428252,
+              39.732108937887574
+            ],
+            [
+              -105.00284224748611,
+              39.73210687515759
+            ],
+            [
+              -105.00283420085907,
+              39.73370134701503
+            ],
+            [
+              -105.00500679016113,
+              39.73370134701503
+            ],
+            [
+              -105.00500142574309,
+              39.73654366461857
+            ],
+            [
+              -105.00282883644104,
+              39.73654366461857
+            ],
+            [
+              -105.00283151865005,
+              39.736881929736214
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 24",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.00284224748611,
+              39.73210687515759
+            ],
+            [
+              -105.00862777233122,
+              39.732108937887574
+            ],
+            [
+              -105.00860095024109,
+              39.72733148979049
+            ],
+            [
+              -105.00284492969512,
+              39.7273232382984
+            ],
+            [
+              -105.00284224748611,
+              39.73210687515759
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Sheet Number": "sh. 7",
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1890,
+        "Location": "Denver, Colorado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.00233799219131,
+              39.74143390917999
+            ],
+            [
+              -105.00167548656464,
+              39.74048517523994
+            ],
+            [
+              -105.00282615423201,
+              39.74009949053456
+            ],
+            [
+              -104.99529719352722,
+              39.740080928114615
+            ],
+            [
+              -104.9995967745781,
+              39.74349426681711
+            ],
+            [
+              -105.00062942504881,
+              39.74321996850432
+            ],
+            [
+              -105.00004738569258,
+              39.74244244028506
+            ],
+            [
+              -105.00233799219131,
+              39.74143390917999
             ]
           ]
         ]
