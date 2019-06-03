@@ -1,0 +1,493 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.08067995309828,
+              40.59080001931533
+            ],
+            [
+              -105.07833570241928,
+              40.58895057516768
+            ],
+            [
+              -105.0767183303833,
+              40.588952612028585
+            ],
+            [
+              -105.07483005523682,
+              40.590492461114074
+            ],
+            [
+              -105.07791996002196,
+              40.592936593202126
+            ],
+            [
+              -105.08067995309828,
+              40.59080001931533
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.0742346048355,
+              40.59098129467868
+            ],
+            [
+              -105.07671564817429,
+              40.588952612028585
+            ],
+            [
+              -105.0738376379013,
+              40.587005344691555
+            ],
+            [
+              -105.0733146071434,
+              40.58700330777134
+            ],
+            [
+              -105.07126271724701,
+              40.588850768907776
+            ],
+            [
+              -105.0742346048355,
+              40.59098129467868
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.07222294807434,
+              40.5879830592284
+            ],
+            [
+              -105.07091403007507,
+              40.587176445767334
+            ],
+            [
+              -105.06959438323975,
+              40.58839043606678
+            ],
+            [
+              -105.069819688797,
+              40.58875707309964
+            ],
+            [
+              -105.0707557797432,
+              40.58931109858006
+            ],
+            [
+              -105.07222294807434,
+              40.5879830592284
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.06841689348221,
+              40.58499487426178
+            ],
+            [
+              -105.06768465042114,
+              40.585669111708604
+            ],
+            [
+              -105.06904721260071,
+              40.58657351622049
+            ],
+            [
+              -105.06983578205109,
+              40.585950211718114
+            ],
+            [
+              -105.06841689348221,
+              40.58499487426178
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.0767183303833,
+              40.588952612028585
+            ],
+            [
+              -105.07699996232986,
+              40.588952612028585
+            ],
+            [
+              -105.07705628871918,
+              40.585601891966085
+            ],
+            [
+              -105.07367670536041,
+              40.58559578107704
+            ],
+            [
+              -105.07365792989731,
+              40.58700330777134
+            ],
+            [
+              -105.07383495569229,
+              40.587005344691555
+            ],
+            [
+              -105.0767183303833,
+              40.588952612028585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.06895065307617,
+              40.588594123555424
+            ],
+            [
+              -105.06876826286316,
+              40.58814601026153
+            ],
+            [
+              -105.06835520267487,
+              40.58824378069085
+            ],
+            [
+              -105.06854832172394,
+              40.588683745853864
+            ],
+            [
+              -105.06895065307617,
+              40.588594123555424
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.07700264453888,
+              40.588952612028585
+            ],
+            [
+              -105.08067190647125,
+              40.58894446458463
+            ],
+            [
+              -105.08070141077042,
+              40.585610039817254
+            ],
+            [
+              -105.07705628871918,
+              40.585601891966085
+            ],
+            [
+              -105.07700264453888,
+              40.588952612028585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.08068799972534,
+              40.58703793540641
+            ],
+            [
+              -105.08177697658539,
+              40.587042009244655
+            ],
+            [
+              -105.08180379867554,
+              40.586235384433536
+            ],
+            [
+              -105.08069336414337,
+              40.58623945832066
+            ],
+            [
+              -105.08068799972534,
+              40.58703793540641
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1901,
+        "Location": "Fort Collins, Colorado",
+        "Sheet Number": "sh. 10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.07708311080933,
+              40.57809118802172
+            ],
+            [
+              -105.08076310157776,
+              40.5781115599351
+            ],
+            [
+              -105.08079528808594,
+              40.57427745656164
+            ],
+            [
+              -105.07712066173553,
+              40.57428764309974
+            ],
+            [
+              -105.07708311080933,
+              40.57809118802172
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Location": "Fort Collins, Colorado",
+        "Year": 1901,
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Sheet Number": "sh. 6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.08070409297943,
+              40.585610039817254
+            ],
+            [
+              -105.08073091506958,
+              40.58171932795776
+            ],
+            [
+              -105.0770616531372,
+              40.58172136503888
+            ],
+            [
+              -105.07705628871918,
+              40.585601891966085
+            ],
+            [
+              -105.08070409297943,
+              40.585610039817254
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Location": "Fort Collins, Colorado",
+        "Year": 1901,
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Sheet Number": "sh. 7"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.07705628871918,
+              40.585601891966085
+            ],
+            [
+              -105.0770616531372,
+              40.58172136503888
+            ],
+            [
+              -105.07366061210632,
+              40.581692845897415
+            ],
+            [
+              -105.07367670536041,
+              40.58559578107704
+            ],
+            [
+              -105.07705628871918,
+              40.585601891966085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Location": "Fort Collins, Colorado",
+        "Year": 1901,
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Sheet Number": "sh. 9"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.07366061210632,
+              40.581692845897415
+            ],
+            [
+              -105.0770616531372,
+              40.58172136503888
+            ],
+            [
+              -105.07708311080933,
+              40.57809118802172
+            ],
+            [
+              -105.07364988327025,
+              40.578074890486576
+            ],
+            [
+              -105.07366061210632,
+              40.581692845897415
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Location": "Fort Collins, Colorado",
+        "Year": 1901,
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Sheet Number": "sh. 8"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.07705628871918,
+              40.58172136503888
+            ],
+            [
+              -105.08073091506958,
+              40.58171932795776
+            ],
+            [
+              -105.08075773715973,
+              40.5781115599351
+            ],
+            [
+              -105.07708042860031,
+              40.57809322521336
+            ],
+            [
+              -105.07705628871918,
+              40.58172136503888
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1900,
+        "Location": "Idaho Springs, Colorado",
+        "Sheet Number": "sh. 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.52434951066971,
+              39.7443006562853
+            ],
+            [
+              -105.52494764328003,
+              39.741881459569775
+            ],
+            [
+              -105.5206024646759,
+              39.741242100980294
+            ],
+            [
+              -105.52010089159012,
+              39.74371906687586
+            ],
+            [
+              -105.52434951066971,
+              39.7443006562853
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1900,
+        "Location": "Idaho Springs, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.52010089159012,
+              39.74371906687586
+            ],
+            [
+              -105.52069365978241,
+              39.740784234087265
+            ],
+            [
+              -105.51687151193619,
+              39.740786296557566
+            ],
+            [
+              -105.51721215248108,
+              39.743725254023055
+            ],
+            [
+              -105.52010089159012,
+              39.74371906687586
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1900,
+        "Location": "Idaho Springs, Colorado",
+        "Sheet Number": "sh. 4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.5172148346901,
+              39.743725254023055
+            ],
+            [
+              -105.51687151193619,
+              39.740786296557566
+            ],
+            [
+              -105.51366090774536,
+              39.74093685672297
+            ],
+            [
+              -105.51382720470428,
+              39.743820123544054
+            ],
+            [
+              -105.5172148346901,
+              39.743725254023055
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1900,
+        "Location": "Idaho Springs, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.52592396736145,
+              39.743943866201235
+            ],
+            [
+              -105.52607417106628,
+              39.74337464813827
+            ],
+            [
+              -105.5253553390503,
+              39.74328802758604
+            ],
+            [
+              -105.5252131819725,
+              39.743861371121135
+            ],
+            [
+              -105.52592396736145,
+              39.743943866201235
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1900,
+        "Location": "Idaho Springs, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.52139639854431,
+              39.7400788656232
+            ],
+            [
+              -105.52154123783113,
+              39.73971174116824
+            ],
+            [
+              -105.52113354206085,
+              39.739629241021596
+            ],
+            [
+              -105.52100479602815,
+              39.739992240928075
+            ],
+            [
+              -105.52139639854431,
+              39.7400788656232
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

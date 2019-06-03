@@ -1,0 +1,193 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1886,
+        "Location": "Georgetown, Colorado",
+        "Sheet Number": "sh. 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.69884598255157,
+              39.703775647505175
+            ],
+            [
+              -105.69756388664246,
+              39.70706903862253
+            ],
+            [
+              -105.69900691509247,
+              39.707405384883344
+            ],
+            [
+              -105.70054650306702,
+              39.704165662553386
+            ],
+            [
+              -105.69884598255157,
+              39.703775647505175
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1886,
+        "Location": "Georgetown, Colorado",
+        "Sheet Number": "sh. 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.69756388664246,
+              39.70706903862253
+            ],
+            [
+              -105.69879233837128,
+              39.70391184348681
+            ],
+            [
+              -105.69502115249634,
+              39.70327419634693
+            ],
+            [
+              -105.69399118423462,
+              39.70630348365813
+            ],
+            [
+              -105.69756388664246,
+              39.70706903862253
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1886,
+        "Location": "Georgetown, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.69756388664246,
+              39.70707110210152
+            ],
+            [
+              -105.69399118423462,
+              39.70630348365813
+            ],
+            [
+              -105.69328308105469,
+              39.70874662667235
+            ],
+            [
+              -105.69514989852904,
+              39.70893646186528
+            ],
+            [
+              -105.69489240646362,
+              39.71011260304763
+            ],
+            [
+              -105.6963837146759,
+              39.71032306830203
+            ],
+            [
+              -105.69756388664246,
+              39.70707110210152
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1886,
+        "Location": "Georgetown, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.6963461637497,
+              39.71321586879147
+            ],
+            [
+              -105.6966894865036,
+              39.71197375391305
+            ],
+            [
+              -105.69535911083221,
+              39.71172202690977
+            ],
+            [
+              -105.69492995738982,
+              39.712997159156195
+            ],
+            [
+              -105.6963461637497,
+              39.71321586879147
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Set Title": "Sanborn fire insurance maps. Colorado",
+        "Year": 1886,
+        "Location": "Georgetown, Colorado",
+        "Sheet Number": "sh. 3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.70037484169006,
+              39.70451646785646
+            ],
+            [
+              -105.70141553878783,
+              39.7046031371272
+            ],
+            [
+              -105.70195734500884,
+              39.703637387673155
+            ],
+            [
+              -105.7009220123291,
+              39.703443410725406
+            ],
+            [
+              -105.70037484169006,
+              39.70451646785646
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
