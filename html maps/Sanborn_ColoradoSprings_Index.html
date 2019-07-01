@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Colorado Springs, Colorado</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<!--menu styling -->
+<style>
+    #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        width: 100px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+    }
+
+    #menu a:last-child {
+        border: none;
+    }
+
+    #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+    }
+
+    #menu a.active {
+        background-color: #3887be;
+        color: #ffffff;
+    }
+
+    #menu a.active:hover {
+        background: #3074a4;
+    }
+
+</style>
+
+<!--styling for popup box -->
+<style>
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+
+<!--Style for the geocoder-->
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.css' type='text/css' />
+
+<!--Size and placement of the geocoder-->
+<style>
+  .geocoder {
+      position:absolute;
+      z-index:1;
+      width:200px;
+      left:50px;
+      margin-left:0%;
+      top:10px;
+  }
+  .mapboxgl-ctrl-geocoder { min-width:100%; }
+</style>
+
+<nav id='menu'></nav>
+<div id='map'></div>
+<div id='geocoder' class = 'geocoder'></div>
+
+<!--Script for the map-->
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFyeGU5bjFodnoifQ.rTatk-sWYhNaoRAc5Rfhjw';
+
+//create the map
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/outdoors-v11',
+    zoom: 14,
+    center: [-104.827290, 38.832644]
+});
+
+//adds nav controls
+var nav = new mapboxgl.NavigationControl();
+
+//places nav control at top left
+map.addControl(nav, 'top-left');
+
+//function for geocoder searchbar
+var geocoder = new MapboxGeocoder({
+  accessToken: mapboxgl.accessToken,
+  mapboxgl: mapboxgl
+});
+
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map))
+
+//add layers here. First connect to the geojson with map.addSource()
+//then add the layer and style it with map.addlayer()
+//Note: GL doesn't allow for adjusting width of polygon borders greater than 1pt,
+//so you have to add the layer twice, once as polygon, once as line if you to clearly delineate the poly-borders
+map.on('load', function () {
+
+  map.addSource('CoSprings1883', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_CoSprings_1883.geojson'
+  });
+
+  map.addLayer({
+      'id': 'CoSprings 1883',
+      'type': 'fill',
+      'source': 'CoSprings1883',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'purple',
+        'fill-opacity': 0.3
+      },
+  });
+
+  map.addLayer({
+    'id': 'CoSprings1883borders',
+    'type': 'line',
+    'source': 'CoSprings1883',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'line-color': 'purple',
+      'line-width': 2
+    }
+  });
+
+  map.addSource('CoSprings1890', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_CoSprings_1890.geojson'
+  });
+
+  map.addLayer({
+      'id': 'CoSprings 1890',
+      'type': 'fill',
+      'source': 'CoSprings1890',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'yellow',
+        'fill-opacity': 0.3
+      },
+  });
+
+  map.addLayer({
+    'id': 'CoSprings1890borders',
+    'type': 'line',
+    'source': 'CoSprings1890',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'line-color': 'purple',
+      'line-width': 2
+    }
+  });
+
+    map.addSource('CoSprings1892', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_CoSprings_1892.geojson'
+    });
+
+    map.addLayer({
+        'id': 'CoSprings 1892',
+        'type': 'fill',
+        'source': 'CoSprings1892',
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+          'fill-color': 'green',
+          'fill-opacity': 0.3
+        },
+    });
+
+  	map.addLayer({
+  		'id': 'CoSprings1892borders',
+  		'type': 'line',
+  		'source': 'CoSprings1892',
+  		'layout': {
+  			'visibility': 'none'
+  		},
+  		'paint': {
+  			'line-color': 'purple',
+  			'line-width': 2
+  		}
+  	});
+
+    map.addSource('CoSprings1895', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_CoSprings_1895.geojson'
+    });
+
+    map.addLayer({
+      'id': 'CoSprings 1895',
+      'type': 'fill',
+      'source': 'CoSprings1895',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+  		'id': 'CoSprings1895borders',
+  		'type': 'line',
+  		'source': 'CoSprings1895',
+  		'layout': {
+  			'visibility': 'none'
+  		},
+  		'paint': {
+  			'line-color': 'purple',
+  			'line-width': 2
+  		},
+  	});
+    map.addSource('CoSprings1900', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_CoSprings_1900.geojson'
+    });
+
+    map.addLayer({
+      'id': 'CoSprings 1900',
+      'type': 'fill',
+      'source': 'CoSprings1900',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+      'id': 'CoSprings1900borders',
+      'type': 'line',
+      'source': 'CoSprings1900',
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'line-color': 'purple',
+        'line-width': 2
+      },
+    });
+
+    map.addSource('CoSprings1907', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_CoSprings_1907.geojson'
+    });
+    map.addLayer({
+      'id': 'CoSprings 1907',
+      'type': 'fill',
+      'source': 'CoSprings1907',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'blue',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+      'id': 'CoSprings1907borders',
+      'type': 'line',
+      'source': 'CoSprings1907',
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'line-color': 'purple',
+        'line-width': 2
+      },
+    });
+});
+
+    // Change the cursor to a pointer when the mouse is over the index layers.
+    map.on('mousemove', 'CoSprings 1883', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'CoSprings 1883', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'CoSprings 1890', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'CoSprings 1890', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'CoSprings 1892', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'CoSprings 1892', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'CoSprings 1895', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'CoSprings 1895', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'CoSprings 1900', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'CoSprings 1900', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'CoSprings 1907', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'CoSprings 1907', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    // When a click event occurs on a feature in the index layers, open a popup at the
+    // location of the click, with description HTML from its properties.
+    map.on('click', 'CoSprings 1883', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'CoSprings 1890', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'CoSprings 1892', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'CoSprings 1895', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'CoSprings 1900', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'CoSprings 1907', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+
+//Menu button controls. Note that the botton controls both the polygon layer and its separate border line layer
+toggleLayer(['CoSprings 1883', 'CoSprings1883borders'], 'Colorado Springs 1883');
+toggleLayer(['CoSprings 1890', 'CoSprings1890borders'], 'Colorado Springs 1890');
+toggleLayer(['CoSprings 1892', 'CoSprings1892borders'], 'Colorado Springs 1892');
+toggleLayer(['CoSprings 1895','CoSprings1895borders'], 'Colorado Springs 1895');
+toggleLayer(['CoSprings 1900', 'CoSprings1900borders'], 'Colorado Springs 1900');
+toggleLayer(['CoSprings 1907', 'CoSprings1907borders'], 'Colorado Springs 1907');
+
+function toggleLayer(ids, name) {
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = '';
+    link.textContent = name;
+
+    link.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        for (layers in ids){
+            var visibility = map.getLayoutProperty(ids[layers], 'visibility');
+            if (visibility === 'visible') {
+                map.setLayoutProperty(ids[layers], 'visibility', 'none');
+                this.className = '';
+            } else {
+                this.className = 'active';
+                map.setLayoutProperty(ids[layers], 'visibility', 'visible');
+            }
+         }
+
+    };
+
+    var layers = document.getElementById('menu');
+    layers.appendChild(link);
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Boulder, Colorado</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<!--menu styling -->
+<style>
+    #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        width: 100px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+    }
+
+    #menu a:last-child {
+        border: none;
+    }
+
+    #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+    }
+
+    #menu a.active {
+        background-color: #3887be;
+        color: #ffffff;
+    }
+
+    #menu a.active:hover {
+        background: #3074a4;
+    }
+
+</style>
+
+<!--styling for popup box -->
+<style>
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+
+<!--Style for the geocoder-->
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.css' type='text/css' />
+
+<!--Size and placement of the geocoder-->
+<style>
+  .geocoder {
+      position:absolute;
+      z-index:1;
+      width:200px;
+      left:50px;
+      margin-left:0%;
+      top:10px;
+  }
+  .mapboxgl-ctrl-geocoder { min-width:100%; }
+</style>
+
+<nav id='menu'></nav>
+<div id='map'></div>
+<div id='geocoder' class = 'geocoder'></div>
+
+<!--Script for the map-->
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFyeGU5bjFodnoifQ.rTatk-sWYhNaoRAc5Rfhjw';
+
+//create the map
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/outdoors-v11',
+    zoom: 14,
+    center: [-105.277808, 40.017242]
+});
+
+//adds nav controls
+var nav = new mapboxgl.NavigationControl();
+
+//places nav control at top left
+map.addControl(nav, 'top-left');
+
+//function for geocoder searchbar
+var geocoder = new MapboxGeocoder({
+  accessToken: mapboxgl.accessToken,
+  mapboxgl: mapboxgl
+});
+
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map))
+
+//add layers here. First connect to the geojson with map.addSource()
+//then add the layer and style it with map.addlayer()
+//Note: GL doesn't allow for adjusting width of polygon borders greater than 1pt,
+//so you have to add the layer twice, once as polygon, once as line if you to clearly delineate the poly-borders
+map.on('load', function () {
+
+  map.addSource('Boulder1886', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1886.geojson'
+  });
+
+  map.addLayer({
+      'id': 'Boulder 1886',
+      'type': 'fill',
+      'source': 'Boulder1886',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'purple',
+        'fill-opacity': 0.3
+      },
+  });
+
+  map.addLayer({
+    'id': 'Boulder1886borders',
+    'type': 'line',
+    'source': 'Boulder1886',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'line-color': 'purple',
+      'line-width': 2
+    }
+  });
+
+  map.addSource('Boulder1890', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1890.geojson'
+  });
+
+  map.addLayer({
+      'id': 'Boulder 1890',
+      'type': 'fill',
+      'source': 'Boulder1890',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'purple',
+        'fill-opacity': 0.3
+      },
+  });
+
+  map.addLayer({
+    'id': 'Boulder1890borders',
+    'type': 'line',
+    'source': 'Boulder1890',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'line-color': 'purple',
+      'line-width': 2
+    }
+  });
+
+    map.addSource('Boulder1895', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1895.geojson'
+    });
+
+    map.addLayer({
+        'id': 'Boulder 1895',
+        'type': 'fill',
+        'source': 'Boulder1895',
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+          'fill-color': 'purple',
+          'fill-opacity': 0.3
+        },
+    });
+
+  	map.addLayer({
+  		'id': 'Boulder1895borders',
+  		'type': 'line',
+  		'source': 'Boulder1895',
+  		'layout': {
+  			'visibility': 'none'
+  		},
+  		'paint': {
+  			'line-color': 'purple',
+  			'line-width': 2
+  		}
+  	});
+
+    map.addSource('Boulder1900', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1900.geojson'
+    });
+
+    map.addLayer({
+      'id': 'Boulder 1900',
+      'type': 'fill',
+      'source': 'Boulder1900',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+  		'id': 'Boulder1900borders',
+  		'type': 'line',
+  		'source': 'Boulder1900',
+  		'layout': {
+  			'visibility': 'none'
+  		},
+  		'paint': {
+  			'line-color': 'purple',
+  			'line-width': 2
+  		},
+  	});
+    map.addSource('Boulder1906', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1906.geojson'
+    });
+
+    map.addLayer({
+      'id': 'Boulder 1906',
+      'type': 'fill',
+      'source': 'Boulder1906',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+      'id': 'Boulder1906borders',
+      'type': 'line',
+      'source': 'Boulder1906',
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'line-color': 'purple',
+        'line-width': 2
+      },
+    });
+
+    map.addSource('Boulder1910', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1910.geojson'
+    });
+    map.addLayer({
+      'id': 'Boulder 1910',
+      'type': 'fill',
+      'source': 'Boulder1910',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+      'id': 'Boulder1910borders',
+      'type': 'line',
+      'source': 'Boulder1910',
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'line-color': 'purple',
+        'line-width': 2
+      },
+    });
+    map.addSource('Boulder1918', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1918.geojson'
+    });
+
+    map.addLayer({
+      'id': 'Boulder 1918',
+      'type': 'fill',
+      'source': 'Boulder1918',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+  		'id': 'Boulder1918borders',
+  		'type': 'line',
+  		'source': 'Boulder1918',
+  		'layout': {
+  			'visibility': 'none'
+  		},
+  		'paint': {
+  			'line-color': 'purple',
+  			'line-width': 2
+  		},
+  	});
+
+    map.addSource('Boulder1922', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Boulder_1922.geojson'
+    });
+
+    map.addLayer({
+      'id': 'Boulder 1922',
+      'type': 'fill',
+      'source': 'Boulder1922',
+      'layout': {
+          'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': 'red',
+        'fill-opacity': 0.3
+      },
+    });
+
+    map.addLayer({
+      'id': 'Boulder1922borders',
+      'type': 'line',
+      'source': 'Boulder1922',
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'line-color': 'purple',
+        'line-width': 2
+      },
+    });
+
+    map.addSource('contours', {
+        type: 'vector',
+        url: 'mapbox://mapbox.mapbox-terrain-v2'
+    });
+});
+
+    // Change the cursor to a pointer when the mouse is over the index layers.
+    map.on('mousemove', 'Boulder 1886', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1886', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1890', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1890', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1895', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1895', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1900', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1900', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1906', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1906', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1910', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1910', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1918', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1918', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    map.on('mousemove', 'Boulder 1922', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Boulder 1922', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+
+    // When a click event occurs on a feature in the index layers, open a popup at the
+    // location of the click, with description HTML from its properties.
+    map.on('click', 'Boulder 1886', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1890', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1895', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1900', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1906', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1910', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1918', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+    map.on('click', 'Boulder 1922', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
+//Menu button controls. Note that the botton controls both the polygon layer and its separate border line layer
+toggleLayer(['Boulder 1886', 'Boulder1886borders'], 'Boulder 1886');
+toggleLayer(['Boulder 1890', 'Boulder1890borders'], 'Boulder 1890');
+toggleLayer(['Boulder 1895', 'Boulder1895borders'], 'Boulder 1895');
+toggleLayer(['Boulder 1900','Boulder1900borders'], 'Boulder 1900');
+toggleLayer(['Boulder 1906', 'Boulder1906borders'], 'Boulder 1906');
+toggleLayer(['Boulder 1910', 'Boulder1910borders'], 'Boulder 1910');
+toggleLayer(['Boulder 1918', 'Boulder1918borders'], 'Boulder 1918');
+toggleLayer(['Boulder 1922', 'Boulder1922borders'], 'Boulder 1922');
+
+function toggleLayer(ids, name) {
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = '';
+    link.textContent = name;
+
+    link.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        for (layers in ids){
+            var visibility = map.getLayoutProperty(ids[layers], 'visibility');
+            if (visibility === 'visible') {
+                map.setLayoutProperty(ids[layers], 'visibility', 'none');
+                this.className = '';
+            } else {
+                this.className = 'active';
+                map.setLayoutProperty(ids[layers], 'visibility', 'visible');
+            }
+         }
+
+    };
+
+    var layers = document.getElementById('menu');
+    layers.appendChild(link);
+}
+
+
+</script>
+
+</body>
+</html>
