@@ -22,7 +22,7 @@
         top: 10px;
         right: 10px;
         border-radius: 3px;
-        width: 100px;
+        width: 112px;
         border: 1px solid rgba(0,0,0,0.4);
         font-family: 'Open Sans', sans-serif;
     }
@@ -97,7 +97,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFye
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/outdoors-v11',
-    zoom: 14,
+    zoom: 12,
     center: [-104.990250, 39.739235]
 });
 
@@ -134,7 +134,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'purple',
+        'fill-color': 'blue',
         'fill-opacity': 0.3
       },
   });
@@ -165,7 +165,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'purple',
+        'fill-color': 'red',
         'fill-opacity': 0.3
       },
   });
@@ -183,15 +183,15 @@ map.on('load', function () {
     }
   });
 
-    map.addSource('Denver1890v3', {
+    map.addSource('Denver1893v3', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_Vol3_1890.geojson'
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_Vol3_1893.geojson'
     });
 
     map.addLayer({
-        'id': 'Denver 1890 v3',
+        'id': 'Denver 1893 v3',
         'type': 'fill',
-        'source': 'Denver1890v3',
+        'source': 'Denver1893v3',
         'layout': {
             'visibility': 'none'
         },
@@ -202,9 +202,9 @@ map.on('load', function () {
     });
 
   	map.addLayer({
-  		'id': 'Denver 1890 v3 borders',
+  		'id': 'Denver 1893 v3 borders',
   		'type': 'line',
-  		'source': 'Denver1890v3',
+  		'source': 'Denver1893v3',
   		'layout': {
   			'visibility': 'none'
   		},
@@ -235,12 +235,12 @@ map.on('load', function () {
       map.getCanvas().style.cursor = '';
     });
 
-    map.on('mousemove', 'Denver 1890 v3', function () {
+    map.on('mousemove', 'Denver 1893 v3', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'Denver 1890 v3', function () {
+    map.on('mouseleave', 'Denver 1893 v3', function () {
       map.getCanvas().style.cursor = '';
     });
 
@@ -263,7 +263,7 @@ map.on('load', function () {
       .addTo(map);
     });
 
-    map.on('click', 'Denver 1890 v3', function (e) {
+    map.on('click', 'Denver 1893 v3', function (e) {
 
       new mapboxgl.Popup()
       .setLngLat(e.lngLat)
@@ -275,7 +275,7 @@ map.on('load', function () {
 //Menu button controls. Note that the botton controls both the polygon layer and its separate border line layer
 toggleLayer(['Denver 1890 v1', 'Denver 1890 v1 borders'], 'Denver 1890 v1');
 toggleLayer(['Denver 1890 v2', 'Denver 1890 v2 borders'], 'Denver 1890 v2');
-toggleLayer(['Denver 1890 v3', 'Denver 1890 v3 borders'], 'Denver 1890 v3');
+toggleLayer(['Denver 1893 v3', 'Denver 1893 v3 borders'], 'Denver 1893 v3');
 
 
 function toggleLayer(ids, name) {
