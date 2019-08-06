@@ -97,8 +97,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFye
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/outdoors-v11',
-    zoom: 14,
-    center: [-105.277808, 40.017242]
+    zoom: 13.5,
+    center: [-105.277808, 40.0125]
 });
 
 //adds nav controls
@@ -165,7 +165,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'purple',
+        'fill-color': 'yellow',
         'fill-opacity': 0.3
       },
   });
@@ -196,7 +196,7 @@ map.on('load', function () {
             'visibility': 'none'
         },
         'paint': {
-          'fill-color': 'purple',
+          'fill-color': 'green',
           'fill-opacity': 0.3
         },
     });
@@ -257,7 +257,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'red',
+        'fill-color': 'blue',
         'fill-opacity': 0.3
       },
     });
@@ -287,7 +287,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'red',
+        'fill-color': 'orange',
         'fill-opacity': 0.3
       },
     });
@@ -317,7 +317,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'red',
+        'fill-color': 'lightseagreen',
         'fill-opacity': 0.3
       },
     });
@@ -348,7 +348,7 @@ map.on('load', function () {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'red',
+        'fill-color': 'magenta',
         'fill-opacity': 0.3
       },
     });
@@ -366,10 +366,6 @@ map.on('load', function () {
       },
     });
 
-    map.addSource('contours', {
-        type: 'vector',
-        url: 'mapbox://mapbox.mapbox-terrain-v2'
-    });
 });
 
     // Change the cursor to a pointer when the mouse is over the index layers.
