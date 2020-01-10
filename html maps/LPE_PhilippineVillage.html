@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Mobile redirect script by https://pagecrafter.com -->
+  <script type="text/javascript" src="js/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
+    SA.redirection_mobile ({
+      mobile_url : "s3.us-east-2.amazonaws.com/outpw/LPE_PhilippineVillage_Mobile_dev.html",
+    });
+  </script>
+
+  <meta charset='utf-8' />
+  <title>Philippine Village 1904</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+
+<body>
+
+<!--Style for the links, basemap toggle menu, geocoder & geolocater positioning -->
+<style>
+    a:link {
+    color: #a6a6a6;
+    }
+    a:visited {
+    color: #a6a6a6;
+    }
+    a:hover {
+    color: #a6a6a6;
+    }
+
+    #menu {
+        position: absolute;
+        color: #FFFFFF;
+        right: 5px;
+        top: 5px;
+        background-color: #000000;
+        opacity: 0.7;
+        padding: 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 75%;
+        border-radius: 3px;
+    }
+    .geocoder {
+        position:absolute;
+        z-index:1;
+        width:200px;
+        left:50px;
+        margin-left:0%;
+        top:10px;
+    }
+    .mapboxgl-ctrl-geocoder { min-width:100%; }
+
+    .geolocater {
+        position: absolute;
+        z-index: 1;
+        width: 30px;
+        left: 10px;
+        top: 110px;
+        margin-left: 0%;
+    }
+
+    #attribution {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.7);
+      font-family: 'Open Sans', sans-serif;
+      color: #FFFFFF;
+      background-color: #000000;
+      padding: 5px;
+      font-size: 70%;
+      opacity: 0.82;
+      border-radius: 3px;
+    }
+
+</style>
+
+<!--Style for the geocoder-->
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.css' type='text/css' />
+
+<div id='map'></div>
+<div id='menu'>
+    <input id='satellite-v9' type='radio' name='rtoggle' value='satellite' checked='checked'>
+    <label for='satellite'>satellite</label>
+    <input id='streets-v11' type='radio' name='rtoggle' value='streets'>
+    <label for='streets'>streets</label>
+</div>
+<div id='geocoder' class = 'geocoder'></div>
+<div id='geolocater' class = 'geolocater'></div>
+<div id='attribution'>
+  © <a href= "https://www.mapbox.com/about/maps/" target = "_blank">Mapbox</a> © <a href= "http://www.openstreetmap.org/about/" target = "_blank">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/#/-74.07214706629739/40.71655453008873/15" target = "_blank">Improve this map</a></strong> | <a href= "https://mohistory.org/collections/item/resource/196473" target = "_blank"><b>Historical image courtesy of the Missouri Historical Society</b></a>
+</div>
+
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFyeGU5bjFodnoifQ.rTatk-sWYhNaoRAc5Rfhjw';
+
+var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/mapbox/satellite-v9', // stylesheet location
+  center: [-90.3110333, 38.6398275], // starting position [lng, lat] //verticle center
+  //center: [-90.31, 38.635], //pitched starting position
+  zoom: 14.5, // starting zoom
+  //pitch: 60, // pitch in degrees
+  //bearing: -25, // bearing in degrees
+  attributionControl: false
+})
+/*
+.addControl(new mapboxgl.AttributionControl({
+  customAttribution: '<a href="https://mohistory.org/collections/item/resource/196473" target="_blank"><b>Historical image courtesy of the Missouri Historical Society</b></a>'
+}));
+*/
+//adds nav controls
+var nav = new mapboxgl.NavigationControl();
+
+//places nav control at top left
+map.addControl(nav, 'top-left');
+
+//Add geocoder searchbar to map
+var geocoder = new MapboxGeocoder({
+  accessToken: mapboxgl.accessToken,
+  mapboxgl: mapboxgl
+});
+
+// Add geolocater control to the map.
+var geolocater = new mapboxgl.GeolocateControl({
+  positionOptions: {
+    enableHighAccuracy: true
+  },
+  trackUserLocation: true
+});
+
+
+
+/*
+map.addControl(new mapboxgl.GeolocateControl({
+  positionOptions: {
+    enableHighAccuracy: true
+  },
+  trackUserLocation: true
+}));
+*/
+
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map))
+document.getElementById('geolocater').appendChild(geolocater.onAdd(map))
+
+map.on('load', function() {
+  loadlayers()
+
+  var layerList = document.getElementById('menu');
+  var inputs = layerList.getElementsByTagName('input');
+
+  function switchLayer(layer) {
+    var layerId = layer.target.id;
+    map.setStyle('mapbox://styles/mapbox/' + layerId);
+    map.on('style.load', function() {
+      loadlayers();
+    });
+  }
+
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].onclick = switchLayer;
+  }
+});
+
+function loadlayers() {
+  map.addSource('PhilippineVillage1904', {
+    'type': 'image',
+    'url': 'https://raw.githubusercontent.com/outpw/planets/master/A0934-00006_invert.jpg',
+    'coordinates': [
+      [-90.3200798, 38.6488471],
+      [-90.3005386, 38.6475044],
+      [-90.3030715, 38.6294935],
+      [-90.3226390, 38.6308262]
+    ]
+  });
+
+  map.addLayer({
+    'id': 'overlay',
+    'source': 'PhilippineVillage1904',
+    'type': 'raster',
+    'paint': {
+      'raster-opacity': 0.9
+    }
+  });
+}
+
+
+</script>
+
+</body>
+</html>

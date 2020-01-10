@@ -245,7 +245,36 @@ map.on('load', function () {
   			'line-width': 2
   		}
   	});
+    map.addSource('DenverSupplement', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1916-19.geojson'
+    });
 
+    map.addLayer({
+        'id': 'Denver 1916-19 Suppl',
+        'type': 'fill',
+        'source': 'DenverSupplement',
+        'layout': {
+            'visibility': 'none'
+        },
+        'paint': {
+          'fill-color': 'Green',
+          'fill-opacity': 0.3
+        },
+    });
+
+    map.addLayer({
+      'id': 'Denver Suppl borders',
+      'type': 'line',
+      'source': 'DenverSupplement',
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'line-color': 'Green',
+        'line-width': 2
+      },
+    });
 });
 
     // Change the cursor to a pointer when the mouse is over the index layers.
@@ -286,6 +315,15 @@ map.on('load', function () {
       map.getCanvas().style.cursor = '';
     });
 
+    map.on('mousemove', 'Denver 1916-19 Suppl', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'Denver 1916-19 Suppl', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
 
     // When a click event occurs on a feature in the index layers, open a popup at the
     // location of the click, with description HTML from its properties.
@@ -322,12 +360,21 @@ map.on('load', function () {
       .addTo(map);
     });
 
+    map.on('click', 'Denver 1916-19 Suppl', function (e) {
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
+      .addTo(map);
+    });
+
 
 //Menu button controls. Note that the botton controls both the polygon layer and its separate border line layer
 toggleLayer(['Denver 1887', 'Denver 1887 borders'], 'Denver 1887');
 toggleLayer(['Denver 1890 v1', 'Denver 1890 v1 borders'], 'Denver 1890 v1');
 toggleLayer(['Denver 1890 v2', 'Denver 1890 v2 borders'], 'Denver 1890 v2');
 toggleLayer(['Denver 1893 v3', 'Denver 1893 v3 borders'], 'Denver 1893 v3');
+toggleLayer(['Denver 1916-19 Suppl', 'Denver Suppl borders'], 'Denver 1916-19 Suppl');
 
 
 function toggleLayer(ids, name) {
