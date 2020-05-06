@@ -8,20 +8,24 @@ workDirect = 'D:\ForPhil\\'
 savePath = 'results\\'
 workPath = 'data\\' #place the unjoined sanborn maps within 
 workPathCSV = 'SanbornCSV\\'
-os.chdir(path + workPath)
+os.chdir(workDirect + workPath)
 
 sanbornList = []
 csvList = []
+try:
+    os.mkdir(workDirect + "results")
+except:
+    print "results folder already created"
 
 print ("gathering files into a list") 
 for file in glob.glob("*.geojson"):
     sanbornList.append(file)
-os.chdir(path + workPathCSV)
+os.chdir(workDirect + workPathCSV)
 
 for file in glob.glob("*.csv"):
     csvList.append(file)
 
-os.chdir(path + savePath)
+os.chdir(workDirect + savePath)
 
 
 print ("conducting the join") 
@@ -55,6 +59,7 @@ for i in sanbornList:
         if sanbornName == csvName:
             jsonJoin = geopandas.read_file(workDirect + workPath + i)
             jsonJoin = jsonJoin.rename(columns = {'Sheet Number':'sheet number'})
+            jsonJoin = jsonJoin.rename(columns = {'Set Title':'Set_Title'})
             
             csvJoin = pd.read_csv(workDirect + workPathCSV + z)
             try:
@@ -73,9 +78,6 @@ for i in sanbornList:
             join_json_csv.to_file(i, driver = 'GeoJSON')
             print ("Joining", i, "and", z)
             volumeName = ''
-            
-            #edit the tables
-            #rename('Sheet Number':'sheet number')
             
     print ("\n")
     
