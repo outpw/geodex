@@ -68,7 +68,7 @@ for i in sanbornList:
                 print ("Joining", i, "and", z)
             except:
                 join_json_csv = jsonJoin.merge(csvJoin, on = 'sheet number')
-                print (join_json_csv)
+                
                 print ("Did not join", i, "and", z)
         elif volumeName == csvName:
             jsonJoin = geopandas.read_file(workDirect + workPath + i)
