@@ -78,6 +78,7 @@ for i in sanbornList:
             join_json_csv.to_file(i, driver = 'GeoJSON')
             print ("Joining", i, "and", z)
             volumeName = ''
-            
+        elif sanbornName != csvName or volumeName != csvName:
+            print "could not find", csvName
     print ("\n")
     

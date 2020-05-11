@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Denver, Colorado</title>
+    <title>Las Animas, Colorado</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
@@ -22,7 +22,7 @@
         top: 10px;
         right: 10px;
         border-radius: 3px;
-        width: 112px;
+        width: 100px;
         border: 1px solid rgba(0,0,0,0.4);
         font-family: 'Open Sans', sans-serif;
     }
@@ -97,8 +97,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFye
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/outdoors-v11',
-    zoom: 12,
-    center: [-104.990250, 39.739235]
+    zoom: 13,
+    center: [-103.2203, 38.0665]
 });
 
 //adds nav controls
@@ -119,62 +119,30 @@ document.getElementById('geocoder').appendChild(geocoder.onAdd(map))
 //then add the layer and style it with map.addlayer()
 //Note: GL doesn't allow for adjusting width of polygon borders greater than 1pt,
 //so you have to add the layer twice, once as polygon, once as line if you to clearly delineate the poly-borders
-
 map.on('load', function () {
 
-  map.addSource('Denver1887', {
+  map.addSource('LasAnimas1906', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1887.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Las_Animas_1906.geojson'
   });
 
   map.addLayer({
-      'id': 'Denver 1887',
+      'id': 'LasAnimas 1906',
       'type': 'fill',
-      'source': 'Denver1887',
+      'source': 'LasAnimas1906',
       'layout': {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'Orange',
+        'fill-color': 'lightseagreen',
         'fill-opacity': 0.3
       },
   });
 
   map.addLayer({
-    'id': 'Denver 1887 borders',
+    'id': 'LasAnimas1906borders',
     'type': 'line',
-    'source': 'Denver1887',
-    'layout': {
-      'visibility': 'none'
-    },
-    'paint': {
-      'line-color': 'OrangeRed',
-      'line-width': 2
-    }
-  });
-
-  map.addSource('Denver1890v1', {
-      type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1890_v.1.geojson'
-  });
-
-  map.addLayer({
-      'id': 'Denver 1890 v1',
-      'type': 'fill',
-      'source': 'Denver1890v1',
-      'layout': {
-          'visibility': 'none'
-      },
-      'paint': {
-        'fill-color': 'blue',
-        'fill-opacity': 0.3
-      },
-  });
-
-  map.addLayer({
-    'id': 'Denver 1890 v1 borders',
-    'type': 'line',
-    'source': 'Denver1890v1',
+    'source': 'LasAnimas1906',
     'layout': {
       'visibility': 'none'
     },
@@ -184,28 +152,28 @@ map.on('load', function () {
     }
   });
 
-  map.addSource('Denver1890v2', {
+  map.addSource('LasAnimas1910', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1890_v.2.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Las_Animas_1910.geojson'
   });
 
   map.addLayer({
-      'id': 'Denver 1890 v2',
+      'id': 'LasAnimas 1910',
       'type': 'fill',
-      'source': 'Denver1890v2',
+      'source': 'LasAnimas1910',
       'layout': {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'red',
+        'fill-color': 'purple',
         'fill-opacity': 0.3
       },
   });
 
   map.addLayer({
-    'id': 'Denver 1890 v2 borders',
+    'id': 'LasAnimas1910borders',
     'type': 'line',
-    'source': 'Denver1890v2',
+    'source': 'LasAnimas1910',
     'layout': {
       'visibility': 'none'
     },
@@ -214,129 +182,31 @@ map.on('load', function () {
       'line-width': 2
     }
   });
-
-    map.addSource('Denver1893v3', {
-        type: 'geojson',
-        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1893_v.3.geojson'
-    });
-
-    map.addLayer({
-        'id': 'Denver 1893 v3',
-        'type': 'fill',
-        'source': 'Denver1893v3',
-        'layout': {
-            'visibility': 'none'
-        },
-        'paint': {
-          'fill-color': 'purple',
-          'fill-opacity': 0.3
-        },
-    });
-
-  	map.addLayer({
-  		'id': 'Denver 1893 v3 borders',
-  		'type': 'line',
-  		'source': 'Denver1893v3',
-  		'layout': {
-  			'visibility': 'none'
-  		},
-  		'paint': {
-  			'line-color': 'purple',
-  			'line-width': 2
-  		}
-  	});
-    map.addSource('DenverSupplement', {
-        type: 'geojson',
-        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1916-19.geojson'
-    });
-
-    map.addLayer({
-        'id': 'Denver 1916-19 Suppl',
-        'type': 'fill',
-        'source': 'DenverSupplement',
-        'layout': {
-            'visibility': 'none'
-        },
-        'paint': {
-          'fill-color': 'Green',
-          'fill-opacity': 0.3
-        },
-    });
-
-    map.addLayer({
-      'id': 'Denver Suppl borders',
-      'type': 'line',
-      'source': 'DenverSupplement',
-      'layout': {
-        'visibility': 'none'
-      },
-      'paint': {
-        'line-color': 'Green',
-        'line-width': 2
-      },
-    });
 });
 
     // Change the cursor to a pointer when the mouse is over the index layers.
-
-    map.on('mousemove', 'Denver 1887', function () {
+    map.on('mousemove', 'LasAnimas 1906', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'Denver 1887', function () {
+    map.on('mouseleave', 'LasAnimas 1906', function () {
       map.getCanvas().style.cursor = '';
     });
 
-    map.on('mousemove', 'Denver 1890 v1', function () {
+    map.on('mousemove', 'LasAnimas 1910', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'Denver 1890 v1', function () {
-      map.getCanvas().style.cursor = '';
-    });
-
-    map.on('mousemove', 'Denver 1890 v2', function () {
-      map.getCanvas().style.cursor = 'pointer';
-    });
-
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'Denver 1890 v2', function () {
-      map.getCanvas().style.cursor = '';
-    });
-
-    map.on('mousemove', 'Denver 1893 v3', function () {
-      map.getCanvas().style.cursor = 'pointer';
-    });
-
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'Denver 1893 v3', function () {
-      map.getCanvas().style.cursor = '';
-    });
-
-    map.on('mousemove', 'Denver 1916-19 Suppl', function () {
-      map.getCanvas().style.cursor = 'pointer';
-    });
-
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'Denver 1916-19 Suppl', function () {
+    map.on('mouseleave', 'LasAnimas 1910', function () {
       map.getCanvas().style.cursor = '';
     });
 
 
     // When a click event occurs on a feature in the index layers, open a popup at the
     // location of the click, with description HTML from its properties.
-
-    map.on('click', 'Denver 1887', function (e) {
-
-      new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a> <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
-      .addTo(map);
-    });
-
-    map.on('click', 'Denver 1890 v1', function (e) {
+    map.on('click', 'LasAnimas 1906', function (e) {
 
       new mapboxgl.Popup()
       .setLngLat(e.lngLat)
@@ -344,37 +214,17 @@ map.on('load', function () {
       .addTo(map);
     });
 
-    map.on('click', 'Denver 1890 v2', function (e) {
+    map.on('click', 'LasAnimas 1910', function (e) {
 
       new mapboxgl.Popup()
       .setLngLat(e.lngLat)
       .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
       .addTo(map);
     });
-
-    map.on('click', 'Denver 1893 v3', function (e) {
-
-      new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
-      .addTo(map);
-    });
-
-    map.on('click', 'Denver 1916-19 Suppl', function (e) {
-
-      new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
-      .addTo(map);
-    });
-
 
 //Menu button controls. Note that the botton controls both the polygon layer and its separate border line layer
-toggleLayer(['Denver 1887', 'Denver 1887 borders'], 'Denver 1887');
-toggleLayer(['Denver 1890 v1', 'Denver 1890 v1 borders'], 'Denver 1890 v1');
-toggleLayer(['Denver 1890 v2', 'Denver 1890 v2 borders'], 'Denver 1890 v2');
-toggleLayer(['Denver 1893 v3', 'Denver 1893 v3 borders'], 'Denver 1893 v3');
-toggleLayer(['Denver 1916-19 Suppl', 'Denver Suppl borders'], 'Denver 1916-19 Suppl');
+toggleLayer(['LasAnimas 1906', 'LasAnimas1906borders'], 'Las Animas 1906');
+toggleLayer(['LasAnimas 1910', 'LasAnimas1910borders'], 'Las Animas 1910');
 
 
 function toggleLayer(ids, name) {

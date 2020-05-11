@@ -91,7 +91,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 <!--Script for the map-->
 <script>
 
-mapboxgl.accessToken = 'KEY GOES HERE';
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFyeGU5bjFodnoifQ.rTatk-sWYhNaoRAc5Rfhjw';
 
 //create the map
 var map = new mapboxgl.Map({
@@ -154,7 +154,7 @@ map.on('load', function () {
 
   map.addSource('georgetown1890', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Georgetown_1890.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Georgetown_1891.geojson'
   });
 
   map.addLayer({

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Aspen, Colorado</title>
+    <title>Rocky Ford, Colorado</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
@@ -97,8 +97,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFye
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/outdoors-v11',
-    zoom: 13.75,
-    center: [-106.818, 39.191097]
+    zoom: 13,
+    center: [-103.7173, 38.0531]
 });
 
 //adds nav controls
@@ -121,28 +121,28 @@ document.getElementById('geocoder').appendChild(geocoder.onAdd(map))
 //so you have to add the layer twice, once as polygon, once as line if you to clearly delineate the poly-borders
 map.on('load', function () {
 
-  map.addSource('aspen1890', {
+  map.addSource('Rocky1906', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Aspen_1890.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Rocky_Ford_1906.geojson'
   });
 
   map.addLayer({
-      'id': 'aspen 1890',
+      'id': 'Rocky 1914',
       'type': 'fill',
-      'source': 'aspen1890',
+      'source': 'Rocky1906',
       'layout': {
           'visibility': 'none'
       },
       'paint': {
-        'fill-color': 'purple',
+        'fill-color': 'lightseagreen',
         'fill-opacity': 0.3
       },
   });
 
   map.addLayer({
-    'id': 'aspen1890borders',
+    'id': 'Rocky1906borders',
     'type': 'line',
-    'source': 'aspen1890',
+    'source': 'Rocky1906',
     'layout': {
       'visibility': 'none'
     },
@@ -151,101 +151,21 @@ map.on('load', function () {
       'line-width': 2
     }
   });
-
-  map.addSource('aspen1893', {
-      type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Aspen_1893.geojson'
-  });
-
-  map.addLayer({
-      'id': 'aspen 1893',
-      'type': 'fill',
-      'source': 'aspen1893',
-      'layout': {
-          'visibility': 'none'
-      },
-      'paint': {
-        'fill-color': 'yellow',
-        'fill-opacity': 0.3
-      },
-  });
-
-  map.addLayer({
-    'id': 'aspen1893borders',
-    'type': 'line',
-    'source': 'aspen1893',
-    'layout': {
-      'visibility': 'none'
-    },
-    'paint': {
-      'line-color': 'purple',
-      'line-width': 2
-    }
-  });
-
-    map.addSource('aspen1898', {
-        type: 'geojson',
-        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Aspen_1898.geojson'
-    });
-
-    map.addLayer({
-        'id': 'aspen 1898',
-        'type': 'fill',
-        'source': 'aspen1898',
-        'layout': {
-            'visibility': 'none'
-        },
-        'paint': {
-          'fill-color': 'green',
-          'fill-opacity': 0.3
-        },
-    });
-
-  	map.addLayer({
-  		'id': 'aspen1898borders',
-  		'type': 'line',
-  		'source': 'aspen1898',
-  		'layout': {
-  			'visibility': 'none'
-  		},
-  		'paint': {
-  			'line-color': 'purple',
-  			'line-width': 2
-  		}
-  	});
 });
 
     // Change the cursor to a pointer when the mouse is over the index layers.
-    map.on('mousemove', 'aspen 1890', function () {
+    map.on('mousemove', 'Rocky 1914', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'aspen 1890', function () {
-      map.getCanvas().style.cursor = '';
-    });
-
-    map.on('mousemove', 'aspen 1893', function () {
-      map.getCanvas().style.cursor = 'pointer';
-    });
-
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'aspen 1893', function () {
-      map.getCanvas().style.cursor = '';
-    });
-
-    map.on('mousemove', 'aspen 1898', function () {
-      map.getCanvas().style.cursor = 'pointer';
-    });
-
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'aspen 1898', function () {
+    map.on('mouseleave', 'Rocky 1914', function () {
       map.getCanvas().style.cursor = '';
     });
 
     // When a click event occurs on a feature in the index layers, open a popup at the
     // location of the click, with description HTML from its properties.
-    map.on('click', 'aspen 1890', function (e) {
+    map.on('click', 'Rocky 1914', function (e) {
 
       new mapboxgl.Popup()
       .setLngLat(e.lngLat)
@@ -253,26 +173,9 @@ map.on('load', function () {
       .addTo(map);
     });
 
-    map.on('click', 'aspen 1893', function (e) {
-
-      new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
-      .addTo(map);
-    });
-
-    map.on('click', 'aspen 1898', function (e) {
-
-      new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML('<b>' + e.features[0].properties.Set_Title + '</b><br> Sheet: ' + e.features[0].properties.sheet + '<br><a href="' + e.features[0].properties.url + '" target="_blank">View the sheet</a>  <br> <a href ="'+ e.features[0].properties.url +'"" target="_blank">  <img src= "'+ e.features[0].properties.thumbnail +'" alt = "Sanborn Thumbnail Image"></a>')
-      .addTo(map);
-    });
-
 //Menu button controls. Note that the botton controls both the polygon layer and its separate border line layer
-toggleLayer(['aspen 1890', 'aspen1890borders'], 'Aspen 1886');
-toggleLayer(['aspen 1893', 'aspen1893borders'], 'Aspen 1890');
-toggleLayer(['aspen 1898', 'aspen1898borders'], 'Aspen 1893');
+toggleLayer(['Rocky 1914', 'Rocky1906borders'], 'Rocky Ford 1914');
+
 
 function toggleLayer(ids, name) {
     var link = document.createElement('a');
