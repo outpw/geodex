@@ -91,7 +91,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 <!--Script for the map-->
 <script>
 
-mapboxgl.accessToken = 'KEY GOES HERE';
+mapboxgl.accessToken = 'Key Goes Here';
 
 //create the map
 var map = new mapboxgl.Map({
@@ -155,7 +155,7 @@ map.on('load', function () {
 
   map.addSource('Denver1890v1', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_Vol1_1890.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1890_v.1.geojson'
   });
 
   map.addLayer({
@@ -186,7 +186,7 @@ map.on('load', function () {
 
   map.addSource('Denver1890v2', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_Vol2_1890.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1890_v.2.geojson'
   });
 
   map.addLayer({
@@ -217,7 +217,7 @@ map.on('load', function () {
 
     map.addSource('Denver1893v3', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_Vol3_1893.geojson'
+        data: 'https://raw.githubusercontent.com/outpw/geodex/master/Sanborn_Denver_1893_v.3.geojson'
     });
 
     map.addLayer({
